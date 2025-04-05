@@ -522,7 +522,7 @@ $(document).on("click", 'a[href^="#"]', function (event) {
               <html>
               <head>
 
-                  <title>JAMB 7 Exam Results</title>
+                  <title>Quiz Results</title>
                   <style>           
                       body {
 
