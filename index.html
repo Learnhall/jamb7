@@ -3,49 +3,86 @@
   <head>
     <title>LaunchEnglish - JAMB Use of English Practice Test #7</title>
     <link type="text/css" rel="stylesheet" href="css/main.css" />
-    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans"
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
     />
-    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0"
+    <meta
+      charset="UTF-8"
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
     />
+    <style>
+      [data-focusable]:focus {
+        outline: 2px solid Highlight; /* Uses system default focus color */
+        outline-offset: 2px; /* Optional: adds a little space between element and outline */
+        border-radius: 4px; /* Optional: slightly r	ounded like some browsers */
+      }
+      </style>
   </head>
   <body>
-
-  <nav>
-    <div class="logo">LaunchEnglish</div>
-    <div class="navbar">
-      <ul class="nav-menu">
-        <li><a href="https://www.launchenglish.com" class="nav-link">Home</a></li>
-        <li><a href="https://blog.launchenglish.com" class="nav-link">Blog</a></li>
+    <nav>
+      <div class="logo">LaunchEnglish</div>
+      <div class="navbar">
+        <ul class="nav-menu">
+          <li>
+            <a href="https://www.launchenglish.com" class="nav-link">Home</a>
+          </li>
+          <li>
+            <a href="https://blog.launchenglish.com" class="nav-link">Blog</a>
+          </li>
           <!-- <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
           <li class="nav-item"><a href="#" class="nav-link">Home</a></li> -->
-      </ul>
-    </div>
+        </ul>
+      </div>
 
-    <div class="hamburger">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </div>
-  </nav>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
 
     <div id="container">
       <div class="title">
         <h1>JAMB Use of English Practice Test #7</h1>
         <h3>60 Questions</h3>
+        <div
+          id="timer"
+          style="font-size: 20px; font-weight: bold; color: red"
+        ></div>
+        <div
+          id="progress-container"
+          style="width: 100%; background-color: #f3f3f3; border-radius: 5px"
+        >
+          <div
+            id="progress-bar"
+            style="
+              height: 30px;
+              background-color: green;
+              border-radius: 5px;
+              transition: width 0.5s ease-in-out;
+            "
+          ></div>
+          <span id="progress-text">0%</span>
+          <!-- This will display the percentage -->
+        </div>
         <p id="qType"></p>
       </div>
       <br />
       <div id="containerInner">
         <h3 style="text-align: center"></h3>
         <div id="image">
-          <img src="#" width="100%" />
+          <img src="#" width="100%" alt="question-image" />
         </div>
         <div id="audio">
           <h5>Audio</h5>
           <audio
             controls
             src="/audio/Button Down Sound.mp3"
-            style="width: 100%">
+            style="width: 100%"
+          >
             Your browser does not support the audio element.
           </audio>
           <!-- <audio src="/audio/Button-Down-Sound.ogg" controls>
@@ -56,25 +93,17 @@
         <!-- <h6><i></i></h6> -->
       </div>
       <div id="quiz"></div>
-      <div class="button" id="next"><a href="#">Next</a></div>
-      <div class="button" id="prev"><a href="#">Prev</a></div>
-      <div class="button" id="start"><a href="#">Start Over</a></div>
-      <div class="capture" id="capt">
-        <p>Don't have time to finish the test?</p>
-        <p>Enter your email address and we will send a link to continue the exam.</p>
-        <p>However, once you complete the entire exam, you will automatically be emailed an entire PDF with all the solutions and explanations.</p>
-        <div class="email-cont">
-          <input type="text" class="email" />
-          <button class="button">Save Exam</button>
-        </div>
-      </div>
+      <div class="button" id="next" data-focusable tabindex="0"><a href="#">Next</a></div>
+      <div class="button" id="prev" data-focusable tabindex="0"><a href="#">Prev</a></div>
+      <div class="button" id="start" data-focusable tabindex="0"><a href="#">Start Over</a></div>
     </div>
 
     <!--this is for the NaN quiz alert-->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script
       type="text/javascript"
-      src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"
+    ></script>
     <!--<script type="text/javascript" src='questions.json'></script>
         -->
     <script type="text/javascript" src="js/questions.js"></script>

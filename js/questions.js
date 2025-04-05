@@ -1074,5 +1074,29 @@
       explanation: "The capitalized word 'RED' will be changed to another adjective.  In this case, it's 'blue'.  Hence, the correct answer is 'A) Did she wear a blue dress to the party'?"
     },
 
-  ];
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  ];
